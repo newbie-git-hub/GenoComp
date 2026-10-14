@@ -10,8 +10,6 @@ from torch.cuda.amp import autocast, GradScaler
 DEVICE     = "cuda" if torch.cuda.is_available() else "cpu"
 K          = 4
 KMER_VOCAB = 4**K
-# K          = 6
-# KMER_VOCAB = 4**6   # 4096 instead of 256
 BLOCK_SIZE = 320
 EMBED_DIM  = 256
 N_HEADS    = 8
