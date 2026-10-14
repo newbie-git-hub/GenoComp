@@ -458,7 +458,7 @@ for fname in os.listdir(TEST_DIR):
     meta_len    = struct.pack('>I', len(meta_bytes))
     bundle      = meta_len + meta_bytes + compressed
 
-    comp_path   = f"{prefix}.dnacomp"
+    comp_path   = f"{prefix}.genocomp"
     with open(comp_path, 'wb') as f:
         f.write(bundle)
 
