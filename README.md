@@ -67,7 +67,7 @@ The supplied code runs training and testing as one pipeline.
 2. Run the code in the Kaggle Notebook.
 3. The program cleans and tokenizes the training sequences, creates training and validation blocks, and trains the causal Transformer.
 4. The checkpoint with the lowest validation loss is saved as `best_model.pt`.
-5. After training, the code processes each test file: it cleans and tokenizes the DNA, compresses the tokens into a `.dnacomp` file, decompresses that file, and checks the reconstructed cleaned sequence.
+5. After training, the code processes each test file: it cleans and tokenizes the DNA, compresses the tokens into a `.genocomp` file, decompresses that file, and checks the reconstructed cleaned sequence.
 6. Outputs are written to `/kaggle/working`. The training metrics plot is saved as `training_plots.png`, compressed files use the `.genocomp` extension, and reconstructed cleaned sequences use `_reconstructed.txt`.
 
 **Important:** Decompression requires the same trained model weights and compatible configuration used during compression. The supplied implementation reconstructs the cleaned `ACGT` sequence; it does not preserve FASTA headers, original line formatting, or characters removed during cleaning.
